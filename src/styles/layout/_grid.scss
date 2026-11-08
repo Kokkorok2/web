@@ -1,0 +1,4 @@
+// _grid.scss
+@use "../abstracts/mixins" as *;
+
+.container { @include container(); }

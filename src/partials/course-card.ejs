@@ -1,0 +1,15 @@
+<article class="course-card" data-course-id="<%= course.id %>" data-category="<%= course.category.slug %>" data-level="<%= course.level.toLowerCase() %>">
+  <div class="course-card__media">
+    <%- include('picture', { course, cls: 'course-card', sizes: '(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw', loading }) %>
+    <p class="course-card__tag tag" data-i18n="category.<%= course.category.slug %>"><%= course.category.name %></p>
+  </div>
+  <div class="course-card__body">
+    <h<%= level %> class="course-card__title"><a class="course-card__link" href="course-details.html?id=<%= course.id %>"><%= course.title %></a></h<%= level %>>
+    <p class="course-card__meta"><span><%= course.hours %> <span data-i18n="card.hours">hours</span></span> &middot; <span data-i18n="level.<%= course.level.toLowerCase() %>"><%= course.level %></span></p>
+    <p class="course-card__rating"><span aria-hidden="true">&#9733;</span> <span class="visually-hidden" data-i18n="card.rating">Rating:</span> <span><%= course.rating.toFixed(1) %></span> <span>(<%= course.ratingLabel %>)</span> &middot; <span class="visually-hidden" data-i18n="card.by">Instructor:</span> <span><%= course.instructor.name %></span></p>
+    <div class="course-card__footer">
+      <p class="course-card__price"><data value="<%= course.price %>">$<%= course.price %></data></p>
+      <a class="button button--primary course-card__enroll" href="enrollment.html?course=<%= course.id %>" aria-label="Enroll in <%= course.title %>" data-i18n-aria-label="card.enrollAria"><span data-i18n="card.enroll">Enroll</span></a>
+    </div>
+  </div>
+</article>

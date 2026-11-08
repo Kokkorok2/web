@@ -1,0 +1,21 @@
+<a class="skip-link" href="#main" data-i18n="nav.skip">Skip to main content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html"><%= site.name %></a>
+    <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n="nav.menu">Menu</button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link" href="courses.html"<% if (current === 'courses') { %> aria-current="page"<% } %> data-i18n="nav.allCourses">All Courses</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="courses.html?filter=enrolled" data-i18n="nav.myCourses">My Courses</a></li>
+<% categories.filter((c) => ['design', 'marketing', 'development', 'data-science'].includes(c.slug)).sort((a, b) => ['design', 'marketing', 'development', 'data-science'].indexOf(a.slug) - ['design', 'marketing', 'development', 'data-science'].indexOf(b.slug)).forEach((cat) => { %>
+        <li class="main-nav__item"><a class="main-nav__link" href="courses.html?category=<%= cat.slug %>" data-i18n="category.<%= cat.slug %>"><%= cat.name %></a></li>
+<% }) %>
+      </ul>
+    </nav>
+    <form class="site-search" role="search" aria-label="Site search" action="courses.html" method="get">
+      <label class="site-search__label" for="site-search-input" data-i18n="search.label">Search courses</label>
+      <input class="site-search__input" id="site-search-input" type="search" name="q" placeholder="Search courses..." data-i18n-placeholder="search.placeholder" />
+      <button class="site-search__button" type="submit" data-i18n="search.submit">Search</button>
+    </form>
+  </div>
+</header>

@@ -1,0 +1,6 @@
+// _typography.scss
+@use "../abstracts/functions" as *;
+
+h1 { font-size: rem(32); }
+h2 { font-size: rem(24); }
+p  { font-size: rem(16); line-height: 1.6; }

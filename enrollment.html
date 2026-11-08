@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <%- include('src/partials/head', { title: 'Enrollment', description: 'Enroll in an IT course. Demo form, no real payment.' }) %>
+</head>
+<body>
+  <%- include('src/partials/header', { current: 'enrollment' }) %>
+  <main id="main" tabindex="-1">
+    <h1 class="page-title" data-i18n="enroll.title">Enroll in a course</h1>
+
+    <div class="enroll">
+      <form class="enroll__form form" id="enroll-form" action="enrollment.html" method="get">
+        <fieldset class="form__group">
+          <legend class="form__legend" data-i18n="enroll.details">Your details</legend>
+          <div class="field">
+            <label class="field__label" for="full-name" data-i18n="enroll.name">Full name</label>
+            <input class="field__input" id="full-name" type="text" name="fullName" autocomplete="name" required aria-describedby="full-name-error" placeholder="Enter text ..." data-i18n-placeholder="field.placeholder" />
+            <p class="field__error" id="full-name-error" hidden data-i18n="enroll.nameError">Please enter your full name</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="email" data-i18n="enroll.email">Email</label>
+            <input class="field__input" id="email" type="email" name="email" autocomplete="email" required aria-describedby="email-error" placeholder="name@example.com" />
+            <p class="field__error" id="email-error" hidden data-i18n="enroll.emailError">Please enter a valid email</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__group">
+          <legend class="form__legend" data-i18n="enroll.course">Course</legend>
+          <div class="field">
+            <label class="field__label" for="course-select" data-i18n="enroll.chooseCourse">Choose a course</label>
+            <select class="field__input" id="course-select" name="courseId" required>
+<% courses.forEach((c) => { %>
+              <option value="<%= c.id %>"<% if (c.id === 1) { %> selected<% } %>><%= c.title %> ($<%= c.price %>)</option>
+<% }) %>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__group">
+          <legend class="form__legend" data-i18n="enroll.experience">Your experience level</legend>
+          <ul class="form__options">
+<% ['Beginner', 'Intermediate', 'Advanced'].forEach((lvl, i) => { %>
+            <li class="form__option">
+              <input class="form__radio" id="level-<%= lvl.toLowerCase() %>" type="radio" name="level" value="<%= lvl.toLowerCase() %>"<% if (i === 0) { %> checked<% } %> />
+              <label class="form__radio-label" for="level-<%= lvl.toLowerCase() %>" data-i18n="level.<%= lvl.toLowerCase() %>"><%= lvl %></label>
+            </li>
+<% }) %>
+          </ul>
+        </fieldset>
+
+        <div class="form__consent">
+          <input class="form__checkbox" id="agree" type="checkbox" name="agree" required />
+          <label class="form__checkbox-label" for="agree"><span data-i18n="enroll.agree">I agree to the</span> <a href="#terms" data-i18n="footer.terms">Terms of Service</a></label>
+        </div>
+
+        <button class="button button--primary form__submit" type="submit" data-i18n="enroll.submit">Confirm enrollment</button>
+      </form>
+
+      <aside class="enroll__summary summary" aria-labelledby="summary-title">
+        <h2 class="summary__title" id="summary-title" data-i18n="enroll.summary">Order summary</h2>
+        <dl class="summary__list">
+          <div class="summary__row"><dt data-i18n="enroll.course">Course</dt><dd><%= courses[0].title %></dd></div>
+          <div class="summary__row"><dt data-i18n="enroll.duration">Duration</dt><dd><%= courses[0].hours %> <span data-i18n="card.hours">hours</span></dd></div>
+          <div class="summary__row"><dt data-i18n="enroll.price">Price</dt><dd><data value="<%= courses[0].price %>">$<%= courses[0].price %></data></dd></div>
+        </dl>
+        <p class="summary__note" data-i18n="enroll.note">Demo only: no real payment is taken.</p>
+      </aside>
+    </div>
+
+    <section class="legal" id="terms" aria-labelledby="terms-title">
+      <h2 class="legal__title" id="terms-title" data-i18n="footer.terms">Terms of Service</h2>
+      <p class="legal__text">This is a demo project created for a university course. Enrollments are not stored or processed.</p>
+    </section>
+    <section class="legal" id="privacy" aria-labelledby="privacy-title">
+      <h2 class="legal__title" id="privacy-title" data-i18n="footer.privacy">Privacy Policy</h2>
+      <p class="legal__text">This demo does not collect, store or share any personal data.</p>
+    </section>
+  </main>
+  <%- include('src/partials/footer') %>
+</body>
+</html>

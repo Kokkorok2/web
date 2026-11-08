@@ -1,0 +1,735 @@
+{
+  "test_items": [
+    {
+      "id": 1,
+      "title": "TestTitle1",
+      "category": "Test category",
+      "price": 1000
+    },
+    {
+      "id": 2,
+      "title": "TestTitle2",
+      "category": "Test category",
+      "price": 2000
+    },
+    {
+      "id": 3,
+      "title": "TestTitle3",
+      "category": "Test category",
+      "price": 3000
+    },
+    {
+      "id": 4,
+      "title": "TestTitle4",
+      "category": "Test category",
+      "price": 4000
+    },
+    {
+      "id": 5,
+      "title": "TestTitle5",
+      "category": "Test category",
+      "price": 5000
+    },
+    {
+      "id": 6,
+      "title": "TestTitle6",
+      "category": "Test category",
+      "price": 6000
+    },
+    {
+      "id": 7,
+      "title": "TestTitle7",
+      "category": "Test category",
+      "price": 7000
+    },
+    {
+      "id": 8,
+      "title": "TestTitle8",
+      "category": "Test category",
+      "price": 8000
+    }
+  ],
+  "t1_assets": [
+    {
+      "id": 1,
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "price": 64000,
+      "change24h": -0.8,
+      "marketCap": 1250000000000,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "price": 3200,
+      "change24h": 1.2,
+      "marketCap": 400000000000,
+      "featured": false
+    }
+  ],
+  "t1_transactions": [
+    {
+      "id": 1,
+      "assetId": 1,
+      "type": "buy",
+      "qty": 0.01,
+      "price": 63000,
+      "date": "2025-08-15"
+    },
+    {
+      "id": 2,
+      "assetId": 2,
+      "type": "sell",
+      "qty": 0.5,
+      "price": 3100,
+      "date": "2025-08-20"
+    }
+  ],
+  "t1_watchlist": [
+    {
+      "id": 1,
+      "assetId": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "assetId": 2,
+      "userId": 1
+    }
+  ],
+  "t2_prompts": [
+    {
+      "id": 1,
+      "title": "SEO Blog Writer",
+      "price": 9,
+      "rating": 4.7,
+      "tags": [
+        "seo",
+        "blog"
+      ],
+      "authorId": 1,
+      "createdAt": "2025-07-10"
+    },
+    {
+      "id": 2,
+      "title": "Code Review Helper",
+      "price": 12,
+      "rating": 4.5,
+      "tags": [
+        "code",
+        "review"
+      ],
+      "authorId": 2,
+      "createdAt": "2025-07-20"
+    }
+  ],
+  "t2_authors": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "avatar": "alice.png"
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "avatar": "bob.png"
+    }
+  ],
+  "t2_orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "promptIds": [
+        1
+      ],
+      "total": 9,
+      "date": "2025-08-01"
+    }
+  ],
+  "t2_reviews": [
+    {
+      "id": 1,
+      "promptId": 1,
+      "userId": 1,
+      "text": "Great!",
+      "rating": 5,
+      "date": "2025-08-02"
+    }
+  ],
+  "t3_projects": [
+    {
+      "id": 1,
+      "name": "Acme Website",
+      "clientId": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Mobile App",
+      "clientId": 2,
+      "active": true
+    }
+  ],
+  "t3_timeEntries": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "userId": 1,
+      "minutes": 90,
+      "note": "Landing page",
+      "date": "2025-08-21"
+    },
+    {
+      "id": 2,
+      "projectId": 2,
+      "userId": 1,
+      "minutes": 60,
+      "note": "Auth flow",
+      "date": "2025-08-22"
+    }
+  ],
+  "t3_clients": [
+    {
+      "id": 1,
+      "name": "Acme Inc."
+    },
+    {
+      "id": 2,
+      "name": "Globex"
+    }
+  ],
+  "t3_users": [
+    {
+      "id": 1,
+      "name": "Jane Doe",
+      "email": "jane@example.com"
+    }
+  ],
+  "t4_services": [
+    {
+      "id": 1,
+      "title": "Architecture Review",
+      "price": 1999
+    },
+    {
+      "id": 2,
+      "title": "Cloud Migration",
+      "price": 4999
+    }
+  ],
+  "t4_cases": [
+    {
+      "id": 1,
+      "serviceId": 1,
+      "title": "Monolith to Microservices",
+      "industry": "FinTech",
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "serviceId": 2,
+      "title": "On-prem to AWS",
+      "industry": "E-commerce",
+      "rating": 4.6
+    }
+  ],
+  "t4_team": [
+    {
+      "id": 1,
+      "name": "Consultant A",
+      "role": "Solutions Architect"
+    },
+    {
+      "id": 2,
+      "name": "Consultant B",
+      "role": "Cloud Engineer"
+    }
+  ],
+  "t4_contacts": [
+    {
+      "id": 1,
+      "name": "Victor",
+      "email": "victor@example.com",
+      "message": "Need help",
+      "date": "2025-08-28"
+    }
+  ],
+  "t5_courses": [
+    {
+      "id": 1,
+      "slug": "python-for-beginners",
+      "title": "Python for Beginners",
+      "categoryId": 2,
+      "instructorId": 1,
+      "rating": 4.8,
+      "ratingCount": 2400,
+      "hours": 12,
+      "level": "Beginner",
+      "price": 49,
+      "about": "Master the fundamentals of Python programming from scratch. You will learn syntax, data structures, algorithms, and build real-world applications with hands-on practice.",
+      "learn": [
+        "Core Python syntax, variables, and data types",
+        "Working with lists, dictionaries, and loops",
+        "Functions, modules, and error handling",
+        "Object-Oriented Programming (OOP) basics",
+        "Working with files and external APIs"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "react-for-developers",
+      "title": "React for Developers",
+      "categoryId": 2,
+      "instructorId": 1,
+      "rating": 4.7,
+      "ratingCount": 2900,
+      "hours": 12,
+      "level": "Beginner",
+      "price": 59,
+      "about": "Learn to build modern user interfaces with React: components, state, props, and hooks.",
+      "learn": [
+        "Components, props, and state",
+        "Hooks and side effects",
+        "Forms and routing basics",
+        "Fetching data from an API"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "data-science-essentials",
+      "title": "Data Science Essentials",
+      "categoryId": 3,
+      "instructorId": 1,
+      "rating": 4.2,
+      "ratingCount": 1800,
+      "hours": 12,
+      "level": "Beginner",
+      "price": 69,
+      "about": "A practical introduction to the data science workflow, from raw data to first insights.",
+      "learn": [
+        "Data cleaning and exploration",
+        "Basic statistics for data science",
+        "Visualization fundamentals",
+        "Your first predictive model"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "applied-machine-learning-with-python",
+      "title": "Applied Machine Learning with Python",
+      "categoryId": 3,
+      "instructorId": 2,
+      "rating": 4.9,
+      "ratingCount": 1600,
+      "hours": 22,
+      "level": "Intermediate",
+      "price": 79,
+      "about": "Apply machine learning algorithms to real datasets using Python and scikit-learn.",
+      "learn": [
+        "Supervised and unsupervised learning",
+        "Feature engineering",
+        "Model evaluation and tuning",
+        "Deploying a simple model"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "data-analysis-with-pandas-and-sql",
+      "title": "Data Analysis with Pandas & SQL",
+      "categoryId": 3,
+      "instructorId": 3,
+      "rating": 4.7,
+      "ratingCount": 3400,
+      "hours": 14,
+      "level": "Beginner",
+      "price": 49,
+      "about": "Analyze and transform data with pandas and query relational databases with SQL.",
+      "learn": [
+        "DataFrames and data wrangling",
+        "SQL queries and joins",
+        "Combining pandas with SQL",
+        "Building a reproducible analysis"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "deep-learning-and-neural-networks",
+      "title": "Deep Learning & Neural Networks",
+      "categoryId": 3,
+      "instructorId": 4,
+      "rating": 4.9,
+      "ratingCount": 980,
+      "hours": 26,
+      "level": "Advanced",
+      "price": 89,
+      "about": "Dive into neural network architectures and train deep models on real problems.",
+      "learn": [
+        "Neural network fundamentals",
+        "Convolutional and recurrent networks",
+        "Training, regularization, and optimization",
+        "Transfer learning"
+      ]
+    }
+  ],
+  "t5_instructors": [
+    {
+      "id": 1,
+      "name": "Alex Morgan",
+      "title": "Lead Software Engineer & Educator",
+      "rating": 4.8,
+      "students": 15000,
+      "coursesCount": 5,
+      "bio": "Alex has over 10 years of experience building scalable backend systems in Python and Go. Passionate about teaching practical programming to beginners without unnecessary jargon."
+    },
+    {
+      "id": 2,
+      "name": "Sophia Chen",
+      "title": "Machine Learning Engineer",
+      "rating": 4.9,
+      "students": 9000,
+      "coursesCount": 3,
+      "bio": "Sophia builds production ML pipelines and teaches applied machine learning with a focus on real datasets."
+    },
+    {
+      "id": 3,
+      "name": "Michael Brown",
+      "title": "Senior Data Analyst",
+      "rating": 4.7,
+      "students": 12000,
+      "coursesCount": 4,
+      "bio": "Michael has spent a decade turning messy business data into clear decisions with Python and SQL."
+    },
+    {
+      "id": 4,
+      "name": "Elena Rostova",
+      "title": "Research Scientist",
+      "rating": 4.9,
+      "students": 4000,
+      "coursesCount": 2,
+      "bio": "Elena researches neural networks and explains advanced deep learning topics step by step."
+    }
+  ],
+  "t5_categories": [
+    {
+      "id": 1,
+      "name": "Design",
+      "slug": "design"
+    },
+    {
+      "id": 2,
+      "name": "Development",
+      "slug": "development"
+    },
+    {
+      "id": 3,
+      "name": "Data Science",
+      "slug": "data-science"
+    },
+    {
+      "id": 4,
+      "name": "Marketing",
+      "slug": "marketing"
+    }
+  ],
+  "t5_reviews": [
+    {
+      "id": 1,
+      "courseId": 1,
+      "userId": 1,
+      "author": "Anna B.",
+      "text": "Simple, practical, and beginner-friendly. Built my first script in just two weeks!",
+      "rating": 5.0,
+      "date": "2026-08-15"
+    },
+    {
+      "id": 2,
+      "courseId": 1,
+      "userId": 2,
+      "author": "Dmytro K.",
+      "text": "The lessons on APIs and dictionaries now help me automate daily tasks.",
+      "rating": 5.0,
+      "date": "2026-09-02"
+    },
+    {
+      "id": 3,
+      "courseId": 1,
+      "userId": 3,
+      "author": "Marcus R.",
+      "text": "An excellent foundation before learning Data Science.",
+      "rating": 4.8,
+      "date": "2026-09-20"
+    }
+  ],
+  "t5_enrollments": [],
+  "t6_articles": [
+    {
+      "id": 1,
+      "title": "New AI model",
+      "sourceId": 1,
+      "topicId": 1,
+      "date": "2025-09-01",
+      "tags": [
+        "ai",
+        "ml"
+      ],
+      "bookmarked": false
+    },
+    {
+      "id": 2,
+      "title": "Ethics in AI",
+      "sourceId": 2,
+      "topicId": 2,
+      "date": "2025-09-02",
+      "tags": [
+        "ethics"
+      ],
+      "bookmarked": true
+    }
+  ],
+  "t6_sources": [
+    {
+      "id": 1,
+      "name": "AI Times"
+    },
+    {
+      "id": 2,
+      "name": "Tech Daily"
+    }
+  ],
+  "t6_topics": [
+    {
+      "id": 1,
+      "name": "Models"
+    },
+    {
+      "id": 2,
+      "name": "Ethics"
+    }
+  ],
+  "t6_bookmarks": [
+    {
+      "id": 1,
+      "articleId": 2,
+      "userId": 1,
+      "date": "2025-09-03"
+    }
+  ],
+  "t7_tools": [
+    {
+      "id": 1,
+      "name": "Regex Tester",
+      "categoryId": 1,
+      "stars": 120,
+      "tags": [
+        "regex",
+        "testing"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "JSON Formatter",
+      "categoryId": 1,
+      "stars": 220,
+      "tags": [
+        "json",
+        "format"
+      ]
+    }
+  ],
+  "t7_categories": [
+    {
+      "id": 1,
+      "name": "Utilities"
+    },
+    {
+      "id": 2,
+      "name": "Security"
+    }
+  ],
+  "t7_snippets": [
+    {
+      "id": 1,
+      "toolId": 1,
+      "title": "Email regex",
+      "code": "/^\\S+@\\S+\\.\\S+$/"
+    },
+    {
+      "id": 2,
+      "toolId": 2,
+      "title": "Pretty print",
+      "code": "JSON.stringify(obj, null, 2)"
+    }
+  ],
+  "t8_markets": [
+    {
+      "id": 1,
+      "name": "Spot"
+    },
+    {
+      "id": 2,
+      "name": "Futures"
+    }
+  ],
+  "t8_pairs": [
+    {
+      "id": 1,
+      "marketId": 1,
+      "symbol": "BTC/USDT",
+      "price": 64000,
+      "change24h": -0.6
+    },
+    {
+      "id": 2,
+      "marketId": 1,
+      "symbol": "ETH/USDT",
+      "price": 3200,
+      "change24h": 1.1
+    }
+  ],
+  "t8_orders": [
+    {
+      "id": 1,
+      "pairId": 1,
+      "side": "buy",
+      "qty": 0.002,
+      "price": 63500,
+      "status": "filled",
+      "date": "2025-09-04"
+    },
+    {
+      "id": 2,
+      "pairId": 2,
+      "side": "sell",
+      "qty": 0.1,
+      "price": 3250,
+      "status": "open",
+      "date": "2025-09-05"
+    }
+  ],
+  "t8_balances": [
+    {
+      "id": 1,
+      "asset": "USDT",
+      "amount": 1000,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "asset": "BTC",
+      "amount": 0.01,
+      "userId": 1
+    }
+  ],
+  "t8_trades": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "pairId": 1,
+      "price": 63500,
+      "qty": 0.002,
+      "date": "2025-09-04"
+    }
+  ],
+  "t9_jobs": [
+    {
+      "id": 1,
+      "title": "Frontend Developer",
+      "companyId": 1,
+      "location": "Remote",
+      "salary": 3000,
+      "tags": [
+        "react",
+        "css"
+      ],
+      "date": "2025-08-29"
+    },
+    {
+      "id": 2,
+      "title": "Backend Engineer",
+      "companyId": 2,
+      "location": "Hybrid",
+      "salary": 3500,
+      "tags": [
+        "node",
+        "db"
+      ],
+      "date": "2025-08-30"
+    }
+  ],
+  "t9_companies": [
+    {
+      "id": 1,
+      "name": "Startly"
+    },
+    {
+      "id": 2,
+      "name": "TechNova"
+    }
+  ],
+  "t9_applications": [
+    {
+      "id": 1,
+      "jobId": 1,
+      "name": "Jane",
+      "email": "jane@example.com",
+      "cvUrl": "#",
+      "date": "2025-09-01"
+    }
+  ],
+  "t10_recipes": [
+    {
+      "id": 1,
+      "title": "Pasta Primavera",
+      "time": 25,
+      "calories": 520,
+      "tagIds": [
+        1
+      ],
+      "date": "2025-08-10"
+    },
+    {
+      "id": 2,
+      "title": "Chicken Salad",
+      "time": 15,
+      "calories": 320,
+      "tagIds": [
+        2
+      ],
+      "date": "2025-08-11"
+    }
+  ],
+  "t10_ingredients": [
+    {
+      "id": 1,
+      "name": "Pasta"
+    },
+    {
+      "id": 2,
+      "name": "Chicken"
+    },
+    {
+      "id": 3,
+      "name": "Tomato"
+    }
+  ],
+  "t10_tags": [
+    {
+      "id": 1,
+      "name": "vegetarian"
+    },
+    {
+      "id": 2,
+      "name": "keto"
+    }
+  ],
+  "t10_favorites": [
+    {
+      "id": 1,
+      "recipeId": 2,
+      "userId": 1,
+      "date": "2025-08-12"
+    }
+  ]
+}

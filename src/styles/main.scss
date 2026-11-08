@@ -1,0 +1,10 @@
+// Main SCSS entry
+@use "abstracts/variables";
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "base/reset";
+@use "base/typography";
+@use "layout/grid";
+@use "layout/header";
+@use "layout/footer";
+@use "pages/home";

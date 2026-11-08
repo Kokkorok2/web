@@ -1,0 +1,8 @@
+// _reset.scss
+@use "../abstracts/variables" as *;
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #0f172a; color: #e2e8f0; font-family: $u-font-family; font-size: $u-font-base; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }

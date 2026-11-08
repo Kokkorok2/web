@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <%- include('src/partials/head', { title: 'All Courses', description: 'Browse all IT courses: development, design, data science and marketing.' }) %>
+</head>
+<body>
+  <%- include('src/partials/header', { current: 'courses' }) %>
+  <main id="main" tabindex="-1">
+    <section class="catalog" aria-labelledby="catalog-title">
+      <h1 class="catalog__title" id="catalog-title" data-i18n="courses.title">All Courses</h1>
+
+      <form class="catalog__filters" role="search" aria-label="Filter courses" action="courses.html" method="get">
+        <div class="field">
+          <label class="field__label" for="catalog-q" data-i18n="search.label">Search courses</label>
+          <input class="field__input" id="catalog-q" type="search" name="q" placeholder="Enter text ..." aria-describedby="catalog-q-error" data-i18n-placeholder="field.placeholder" />
+          <p class="field__error" id="catalog-q-error" role="status" hidden data-i18n="search.empty">Try a different search</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="catalog-category" data-i18n="courses.category">Category</label>
+          <select class="field__input" id="catalog-category" name="category">
+            <option value="" data-i18n="courses.allCategories">All categories</option>
+<% categories.forEach((cat) => { %>
+            <option value="<%= cat.slug %>" data-i18n="category.<%= cat.slug %>"><%= cat.name %></option>
+<% }) %>
+          </select>
+        </div>
+        <button class="button button--primary" type="submit" data-i18n="courses.apply">Apply</button>
+      </form>
+
+      <ul class="catalog__list">
+<% courses.forEach((course, i) => { %>
+        <li class="catalog__item">
+          <%- include('src/partials/course-card', { course, level: 2, loading: i < 4 ? 'eager' : 'lazy' }) %>
+        </li>
+<% }) %>
+      </ul>
+    </section>
+  </main>
+  <%- include('src/partials/footer') %>
+</body>
+</html>

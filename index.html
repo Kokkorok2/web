@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <%- include('src/partials/head', { title: 'Learn IT skills at your own pace', description: 'Online IT courses catalog: Python, web development and data science at your own pace.' }) %>
+</head>
+<body>
+  <%- include('src/partials/header', { current: 'home' }) %>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 class="hero__title" id="hero-title" data-i18n="home.title">Learn IT skills at your own pace</h1>
+      <form class="hero__search" role="search" aria-label="Course search" action="courses.html" method="get">
+        <label class="hero__label" for="hero-search-input" data-i18n="search.label">Search courses</label>
+        <input class="hero__input" id="hero-search-input" type="search" name="q" placeholder="Search courses..." data-i18n-placeholder="search.placeholder" />
+        <button class="button button--primary hero__submit" type="submit" data-i18n="home.explore">Explore courses</button>
+      </form>
+    </section>
+
+    <section class="explore" aria-labelledby="explore-title">
+      <div class="explore__head">
+        <h2 class="explore__title" id="explore-title" data-i18n="home.exploreTitle">Explore Courses</h2>
+        <a class="explore__more" href="courses.html"><span data-i18n="home.seeAll">See all</span> <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <ul class="explore__list">
+<% courses.slice(0, 4).forEach((course, i) => { %>
+        <li class="explore__item">
+          <%- include('src/partials/course-card', { course, level: 3, loading: i === 0 ? 'eager' : 'lazy' }) %>
+        </li>
+<% }) %>
+      </ul>
+    </section>
+  </main>
+  <%- include('src/partials/footer') %>
+</body>
+</html>
